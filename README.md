@@ -1,12 +1,18 @@
-# arms-angular
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.15.1.
+# SEP_02_WE_016_ARMS_ajs
+SEP 02 Week-End Batch Academic Resource Management System Angular Js client Application  
 
-## Build & development
+Set up
+====================
+  install npm and bower if you are't already installed
 
-Run `grunt` for building and `grunt serve` for preview.
+  for other requirements please refer this link  
+  https://github.com/yeoman/generator-angular
 
-## Testing
+Execute project
+====================
+  after coloning the repository navigate to root directory of the project
 
-Running `grunt test` will run the unit tests with karma.
+  run npm install && bower install commands
+
+  then run grunt serve
