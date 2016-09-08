@@ -31,6 +31,11 @@ angular
         controllerAs: 'login',
         activeTab: 'login'
       })
+      .when('/manage-users/create-u-role', {
+        templateUrl: 'views/usertype.html',
+        controller: 'UsertypeCtrl',
+        controllerAs: 'usertype',
+      })
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',

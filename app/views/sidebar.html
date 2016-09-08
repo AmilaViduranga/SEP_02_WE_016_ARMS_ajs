@@ -38,6 +38,19 @@
           <li><a href="../../index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
         </ul>
       </li>
+
+      <li class="treeview" ng-class="{active : pathPara1 == 'manage-users'}">
+        <a href="">
+          <i class="fa fa-dashboard"></i> <span>Manage Users</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+          <li><a href=""><i class="fa fa-circle-o"></i>Add New User</a></li>
+          <li ng-class="{active : pathPara2 == 'create-u-role'}"><a ng-href="#/manage-users/create-u-role"><i class="fa fa-circle-o"></i>Create New User Role </a></li>
+        </ul>
+      </li>
     </ul>
   </section>
   <!-- /.sidebar -->
