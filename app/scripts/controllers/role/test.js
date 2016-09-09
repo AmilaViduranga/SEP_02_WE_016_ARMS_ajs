@@ -2,17 +2,16 @@
 
 /**
  * @ngdoc function
- * @name armsAngularApp.controller:UsertypeCtrl
+ * @name armsAngularApp.controller:RoleTestCtrl
  * @description
- * # UsertypeCtrl
+ * # RoleTestCtrl
  * Controller of the armsAngularApp
  */
 angular.module('armsAngularApp')
-  .controller('UsertypeCtrl', function () {
+  .controller('RoleTestCtrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
-
   });

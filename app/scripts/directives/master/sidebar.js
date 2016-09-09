@@ -9,7 +9,7 @@
 angular.module('armsAngularApp')
   .directive('sideBar', function () {
     return {
-      templateUrl: 'views/sidebar.html',
+      templateUrl: 'views/master/sidebar.html',
       controller : 'SidebarCtrl',
       restrict: 'A',
       link: function postLink(scope, element, attrs) {

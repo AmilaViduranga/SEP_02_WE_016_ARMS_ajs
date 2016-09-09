@@ -9,7 +9,7 @@
 angular.module('armsAngularApp')
   .directive('footer', function () {
     return {
-      templateUrl: 'views/footer.html',
+      templateUrl: 'views/master/footer.html',
       restrict: 'A',
       link: function postLink(scope, element, attrs) {
 

@@ -16,7 +16,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ui.bootstrap'
+    'ui.bootstrap',
+    'datatables'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -32,7 +33,7 @@ angular
         activeTab: 'login'
       })
       .when('/manage-users/create-u-role', {
-        templateUrl: 'views/usertype.html',
+        templateUrl: 'views/role/usertype.html',
         controller: 'UsertypeCtrl',
         controllerAs: 'usertype',
       })
@@ -44,9 +45,10 @@ angular
       .otherwise({
         redirectTo: '/'
       });
+
+
   }).run(function($rootScope) {
-    $rootScope.$on('$routeChangeSuccess', function (event, currentRoute) {
-      console.log(currentRoute.templateUrl);
+    $rootScope.$on('$routeChangeSuccess', function (event, currentRoute) {    
       switch(currentRoute.templateUrl) {
           case 'views/login.html':
               $rootScope.bodyClass = 'login-page';
@@ -56,4 +58,10 @@ angular
               break;
       }
   });
+}).constant('CONFIG', {
+    'APP_NAME' : 'Acadamic Resource Management',
+    'APP_VERSION' : '0.0.1',
+    'GOOGLE_ANALYTICS_ID' : '',
+    'BASE_URL' : 'http://localhost:3000/api/',
+    'SYSTEM_LANGUAGE' : ''
 });
