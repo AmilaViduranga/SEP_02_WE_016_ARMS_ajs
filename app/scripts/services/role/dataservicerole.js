@@ -9,8 +9,7 @@
  */
 angular.module('armsAngularApp')
   .factory('dataServiceRole',[ '$http','CONFIG',function ($http,CONFIG) {
-    //base url for api calls
-
+    //get base url
     var baseUrl  = CONFIG.BASE_URL;
     var dataServiceRole = {};
 
@@ -20,7 +19,7 @@ angular.module('armsAngularApp')
     };
 
     dataServiceRole.getAllUsers = function(){
-        return $http.get(baseUrl+'locations');
+        return $http.get('http://57d2c6c7daccc81100513fe7.mockapi.io/api/user-roles');
     };
 
     return dataServiceRole;

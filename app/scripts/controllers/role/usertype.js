@@ -8,12 +8,13 @@
  * Controller of the armsAngularApp
  */
 angular.module('armsAngularApp')
-  .controller('UsertypeCtrl', [ '$scope','dataServiceRole', function ($scope, dataServiceRole) {
+  .controller('UsertypeCtrl', [ '$scope','dataServiceRole',  function ($scope,dataServiceRole) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
+
 
     //add new role method
     function addNewRole(role) {

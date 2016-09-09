@@ -17,7 +17,8 @@ angular
     'ngSanitize',
     'ngTouch',
     'ui.bootstrap',
-    'datatables'
+    'datatables',
+    'datatables.bootstrap'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -48,7 +49,7 @@ angular
 
 
   }).run(function($rootScope) {
-    $rootScope.$on('$routeChangeSuccess', function (event, currentRoute) {    
+    $rootScope.$on('$routeChangeSuccess', function (event, currentRoute) {
       switch(currentRoute.templateUrl) {
           case 'views/login.html':
               $rootScope.bodyClass = 'login-page';
