@@ -18,8 +18,9 @@ angular
     'ngTouch',
     'ui.bootstrap'
   ])
-  .config(function ($routeProvider) {
-    $routeProvider
+    .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+      
+        $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
@@ -36,10 +37,27 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
+     .when('/faculty', {
+        templateUrl: 'views/faculty.html',
+        controller: 'FacultyCtrl',
+        controllerUrl: 'app/controllers/faculty_management'
+      })
+     .when('/department', {
+        templateUrl: 'views/department.html',
+        controller: 'DepartmentCtrl',
+        controllerUrl: 'app/controllers/faculty_management'
+      })
       .otherwise({
         redirectTo: '/'
       });
-  }).run(function($rootScope) {
+    // use the HTML5 History API
+       $locationProvider.html5Mode({
+          enabled: true,
+          requireBase: false
+        });
+
+    }])
+    .run(function($rootScope) {
     $rootScope.$on('$routeChangeSuccess', function (event, currentRoute) {
       console.log(currentRoute.templateUrl);
       switch(currentRoute.templateUrl) {
